@@ -18,6 +18,8 @@ while repetir == True :
             print(f"\nNome completo: {nomeCompleto}")
             print(f"Idade: {idade}")
             repetir = False
+        else:
+            print("O ano precisa ser entre 1922 e 2021")
        
        
         
