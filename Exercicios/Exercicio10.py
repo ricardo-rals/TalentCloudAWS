@@ -39,6 +39,6 @@ operador = int(input("ESCOLHA O NUMERO EQUIVALENTE A CADA OPERAÇÃO" +
                       "\n2. Subtração" + 
                       "\n3. Multiplicação" + 
                       "\n4. Divisão" + 
-                      "\n5Operação: "))
+                      "\nOperação: "))
 
 print(calculadora(num1, num2, operador))
