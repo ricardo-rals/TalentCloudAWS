@@ -1,0 +1,7 @@
+O Sistema de Gerenciamento de Bancos de Dados é um conjunto de programas que serve para gerenciar um ou mais bancos de dados. Sendo assim, pesquise sobre os bancos de dados mais utilizados no mercado de trabalho e descreva dois deles.
+
+___________________________________________________________________________RESPOSTA____________________________________
+
+1 - MySQL: MySQL é um banco de dados de código aberto e amplamente utilizado, que é compatível com várias linguagens de programação, incluindo PHP, Python, Java e C++. Ele é conhecido por sua confiabilidade, facilidade de uso e desempenho rápido. MySQL é adequado para aplicativos web, sistemas de gerenciamento de conteúdo (CMS) e sistemas de gestão de banco de dados (DBMS). Ele também é amplamente utilizado em ambientes de cloud computing e é compatível com várias plataformas, incluindo Windows, Linux e macOS.
+
+2 - MongoDB: MongoDB é um banco de dados de documentos de código aberto, que armazena dados em documentos JSON flexíveis em vez de tabelas e linhas. Ele é conhecido por sua escalabilidade, desempenho rápido e flexibilidade, tornando-o adequado para aplicativos que requerem uma estrutura de dados complexa e dinâmica. MongoDB é amplamente utilizado em aplicativos de big data, análise de dados, IoT e machine learning. Ele é compatível com várias linguagens de programação, incluindo JavaScript, Python, Java e C++.
