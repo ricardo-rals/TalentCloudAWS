@@ -1,27 +1,40 @@
--- Crie um banco de dados, adicione tabelas e determine quais são os atributos de cada uma. Em seguida, execute um trigger que se relacione com algum comando, como insert, select, delete ou update.
+-- Desenvolva um banco de dados e relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais. Siga as instruções:
+-- crie uma base de dados; 
+-- crie tabelas nessa base de dados;
+-- em cada tabela, adicione atributos;
+-- insira dados em cada tabela;
+-- utilize os comandos Joins para realizar consultas nas tabelas. 
 
-CREATE DATABASE ESCOLA;
-USE ESCOLA;
+CREATE DATABASE escola;
 
-CREATE TABLE ALUNO (
-  ID INT PRIMARY KEY,
-  NOME VARCHAR(100),
-  EMAIL VARCHAR(100),
-  ENDERECO VARCHAR(255)
+USE escola;
+
+CREATE TABLE aluno (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100),
+  email VARCHAR(100),
+  endereco VARCHAR(255)
 );
 
-CREATE TABLE PROFESSOR (
-  ID INT PRIMARY KEY,
-  NOME VARCHAR(100),
-  EMAIL VARCHAR(100),
-  ENDERECO VARCHAR(255),
-  ID_ALUNO INT,
-  FOREIGN KEY (ID_ALUNO) REFERENCES ALUNO(ID)
+CREATE TABLE professor (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100),
+  email VARCHAR(100),
+  endereco VARCHAR(255),
+  id_aluno INT,
+  FOREIGN KEY (id_aluno) REFERENCES aluno(id)
 );
 
-CREATE TRIGGER atualiza_email_aluno
-AFTER INSERT ON PROFESSOR
-FOR EACH ROW
-BEGIN
-  UPDATE ALUNO SET EMAIL = NEW.EMAIL WHERE ID = NEW.ID_ALUNO;
-END;
+INSERT INTO aluno (nome, email, endereco)
+VALUES ('Aluno 1', 'aluno1@email.com', 'Endereço do Aluno 1'),
+       ('Aluno 2', 'aluno2@email.com', 'Endereço do Aluno 2'),
+       ('Aluno 3', 'aluno3@email.com', 'Endereço do Aluno 3');
+
+INSERT INTO professor (nome, email, endereco, id_aluno)
+VALUES ('Professor 1', 'professor1@email.com', 'Endereço do Professor 1', 1),
+       ('Professor 2', 'professor2@email.com', 'Endereço do Professor 2', 2),
+       ('Professor 3', 'professor3@email.com', 'Endereço do Professor 3', 3);
+
+SELECT *
+FROM aluno
+JOIN professor ON aluno.id = professor.id_aluno;
